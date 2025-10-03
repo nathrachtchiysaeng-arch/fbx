@@ -73,13 +73,62 @@
 
         .content-display h2 {
             font-size: 1.8rem;
-            color: var(--accent-color);
-            margin-bottom: 1.5rem;
+                   .nutrition-hero-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
         }
-
+        
+        .nutrition-main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
         .nutrition-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
             margin-bottom: 2rem;
             padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .nutrition-item-image {
+            flex-shrink: 0;
+            width: 200px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+        }
+        
+        .item-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .item-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .nutrition-item-content {
+            flex: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .nutrition-item {
+                flex-direction: column;
+            }
+            
+            .nutrition-item-image {
+                width: 100%;
+                height: 200px;
+            }
+        }bottom: 2rem;
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -121,28 +170,35 @@
 
     <header class="hero-nutrition">
         <h1>โภชนาการสำหรับ<span>นักกีฬา</span></h1>
-        <p>เชื้อเพลิงสำคัญสู่ความสำเร็จในสนาม</p>
-    </header>
-
-    <main class="container">
-        <a href="index.html" class="back-button">← กลับสู่หน้าหลัก</a>
-
-        <section class="content-display">
-            <h2>หลักการโภชนาการที่ควรรู้</h2>
-
-            <div class="nutrition-item">
-                <h3>1. อาหารก่อนการฝึกซ้อม (2-3 ชั่วโมง)</h3>
-                <p>เน้นคาร์โบไฮเดรตเชิงซ้อน เช่น ข้าวกล้อง, ขนมปังโฮลวีท เพื่อให้มีพลังงานอย่างต่อเนื่อง หลีกเลี่ยงอาหารที่มีไขมันสูงเพราะจะย่อยยาก</p>
+        <p>เชื้อเพลิงสำคัญสู่ความสำเร็จในสน        <section class="content-display">
+            <div class="nutrition-hero-image">
+                <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&dpr=2" alt="Healthy nutrition for athletes" class="nutrition-main-image">
             </div>
-            
-            <div class="nutrition-item">
-                <h3>2. ระหว่างการฝึกซ้อม</h3>
-                <p>ดื่มน้ำเปล่าให้เพียงพอทุก 15-20 นาที หากฝึกซ้อมนานกว่า 60-90 นาที อาจพิจารณาดื่มเครื่องดื่มเกลือแร่เพื่อชดเชยแร่ธาตุที่สูญเสียไป</p>
-            </div>
-            
-            <div class="nutrition-item">
-                <h3>3. อาหารหลังการฝึกซ้อม (ภายใน 1 ชั่วโมง)</h3>
-                <p>ช่วงเวลาทองของการฟื้นฟู! ควรทานอาหารที่มีทั้งคาร์โบไฮเดรตและโปรตีน เช่น ข้าวกับอกไก่, นมช็อกโกแลต หรือไข่ต้ม เพื่อเติมพลังงานและซ่อมแซมกล้ามเนื้อ</p>
+            <h2>หลักการโภชนาการที่ควรรู้</h2>ss="ba            <div class="nutrition-item">
+                <div class="nutrition-item-image">
+                    <img src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=2" alt="Pre-workout meal" class="item-image">
+                </div>
+                <div class="nutrition-item-content">
+                    <h3>1. อาหารก่อนการฝึกซ้อม (2-3 ชั่วโมง)</h3>
+                    <p>เน้นคาร์โบไฮเดรตเชิงซ้อน เช่น ข้าวกล้อง, ขนมปังโฮลวีท เพื่อให้มีพลังงานอย่างต่อเนื่อง หลีกเลี่ยงอาหารที่มีไขมันสูงเพราะจะย่อยยาก</p>
+                </div>
+            </div>้อน เช่น ข้าวกล้อง, ข            <div class="nutrition-item">
+                <div class="nutrition-item-image">
+                    <img src="https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=2" alt="Hydration during training" class="item-image">
+                </div>
+                <div class="nutrition-item-content">
+                    <h3>2. ระหว่างการฝึกซ้อม</h3>
+                    <p>ดื่มน้ำเปล่าให้เพียงพอทุก 15-20 นาที หากฝึกซ้อมนานกว่า 60-90 นาที อาจพิจารณาดื่มเครื่องดื่มเกลือแร่เพื่อชดเชยแร่ธาตุที่สูญเสียไป</p>
+                </div>
+            </div>ุก 15-20 นาที หากฝึ            <div class="nutrition-item">
+                <div class="nutrition-item-image">
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=2" alt="Post-workout recovery meal" class="item-image">
+                </div>
+                <div class="nutrition-item-content">
+                    <h3>3. อาหารหลังการฝึกซ้อม (ภายใน 1 ชั่วโมง)</h3>
+                    <p>ช่วงเวลาทองของการฟื้นฟู! ควรทานอาหารที่มีทั้งคาร์โบไฮเดรตและโปรตีน เช่น ข้าวกับอกไก่, นมช็อกโกแลต หรือไข่ต้ม เพื่อเติมพลังงานและซ่อมแซมกล้ามเนื้อ</p>
+                </div>
+            </div>ีทั้งคาร์โบไฮเดรตและโปรตีน เช่น ข้าวกับอกไก่, นมช็อกโกแลต หรือไข่ต้ม เพื่อเติมพลังงานและซ่อมแซมกล้ามเนื้อ</p>
             </div>
             
             <div class="nutrition-item">
