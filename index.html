@@ -191,18 +191,36 @@
             margin-bottom: 1rem;
         }
         
-        .tactic-section h3 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .daily-tip, .weekly-challenge-section {
+        .tactic        .daily-tip, .weekly-challenge-section {
             background-color: var(--secondary-surface);
             padding: 1.5rem;
             border-radius: var(--border-radius);
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tip-image-container, .challenge-image-container {
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+        }
+        
+        .tip-image, .challenge-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .tip-image:hover, .challenge-image:hover {
+            transform: scale(1.05);
+        }r-radius: var(--border-radius);
             margin: 2rem 0;
             border: 1px solid var(--border-color);
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -350,17 +368,21 @@
     <main class="container">
         <div class="header-controls">
             <button id="toggle-theme-btn">สลับโหมด</button>
-            <a href="how-to-use.html" class="how-to-link">วิธีใช้งาน</a>
-            <a href="positional-training.html" class="positional-link">ฝึกเฉพาะตำแหน่ง</a>
-        </div>
-        
-        <section class="content-display">
-            <h2 id="program-title"></h2>
-            <p id="program-description"></p>
-            <div id="program-content">
+            <a href="how-to-use.html" c            <section class="daily-tip">
+                <div class="tip-image-container">
+                    <img src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&dpr=2" alt="Football training tip" class="tip-image">
                 </div>
-            
-            <section class="daily-tip">
+                <h2>คำแนะนำประจำวัน</h2>
+                <p id="daily-tip-content"></p>
+            </section> 
+        <s            <section class="weekly-challenge-section">
+                <div class="challenge-image-container">
+                    <img src="https://images.pexels.com/photos/1618269/pexels-photo-1618269.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&dpr=2" alt="Weekly football challenge" class="challenge-image">
+                </div>
+                <h2>ความท้าทายประจำสัปดาห์</h2>
+                <h3 id="weekly-challenge-title"></h3>
+                <p id="weekly-challenge-description"></p>
+            </section>>
                 <h2>คำแนะนำประจำวัน</h2>
                 <p id="daily-tip-content"></p>
             </section>
