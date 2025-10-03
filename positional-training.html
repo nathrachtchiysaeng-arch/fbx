@@ -312,7 +312,7 @@
             let htmlContent = `
                 <p>${data.description}</p>
                 <div class="player-profile">
-                    <img src="${data.player.img}" alt="${data.player.name}">
+                    <img src="${data.player.img}" alt="${data.player.name}" onerror="this.onerror=null;this.src='https://via.placeholder.com/150?text=Player';">
                     <div class="player-profile-text">
                         <h4>${data.player.name}</h4>
                         <p><strong>ทีม:</strong> ${data.player.team}</p>
